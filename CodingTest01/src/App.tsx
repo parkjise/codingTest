@@ -6,7 +6,9 @@
 // import CartTotalCount from "./pages/cart/CartTotalCount";
 // import ProductSearch from "./pages/cart/ProductSearch";
 
-import CartCheckAll from "./pages/cart/CartCheckAll";
+import OrderSummary from "./pages/cart/OrderSummary";
+
+// import CartCheckAll from "./pages/cart/CartCheckAll";
 // import SelectedTotal from "./pages/cart/SelectedTotal";
 // import WishListToggle from "./pages/cart/WishListToggle";
 
@@ -22,7 +24,8 @@ function App() {
       {/* <ProductSort /> */}
       {/* <WishListToggle /> */}
       {/* <SelectedTotal /> */}
-      <CartCheckAll />
+      {/* <CartCheckAll /> */}
+      <OrderSummary />
     </>
   );
 }

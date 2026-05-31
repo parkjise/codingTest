@@ -6,7 +6,10 @@
 // import CartTotalCount from "./pages/cart/CartTotalCount";
 // import ProductSearch from "./pages/cart/ProductSearch";
 
-import OrderSummary from "./pages/cart/OrderSummary";
+// import OrderSummary from "./pages/cart/OrderSummary";
+// import PostDetail from "./pages/board/PostDetail";
+// import PostList from "./pages/board/PostList";
+// import Product from "./pages/cart/Product";
 
 // import CartCheckAll from "./pages/cart/CartCheckAll";
 // import SelectedTotal from "./pages/cart/SelectedTotal";
@@ -14,7 +17,8 @@ import OrderSummary from "./pages/cart/OrderSummary";
 
 // import CategoryFilter from "./pages/cart/CategoryFilter";
 // import ProductSort from "./pages/cart/ProductSort";
-
+// import AddPost from "./pages/board/AddPost";
+import TodoList from "./pages/todo/TodoList";
 function App() {
   return (
     <>
@@ -25,7 +29,12 @@ function App() {
       {/* <WishListToggle /> */}
       {/* <SelectedTotal /> */}
       {/* <CartCheckAll /> */}
-      <OrderSummary />
+      {/* <OrderSummary /> */}
+      {/* <Product /> */}
+      {/* <PostList /> */}
+      {/* <PostDetail /> */}
+      {/* <AddPost /> */}
+      <TodoList />
     </>
   );
 }

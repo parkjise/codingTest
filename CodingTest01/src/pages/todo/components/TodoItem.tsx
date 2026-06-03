@@ -1,11 +1,14 @@
-import React from "react";
-
-const TodoItem = () => {
+type TodoItemProps = {
+  isDone: boolean;
+  content: string;
+  date: number;
+};
+const TodoItem = ({ isDone, content, date }: TodoItemProps) => {
   return (
     <div className="todoItem">
-      <input type="checkbox" />
-      <div className="content">Todo...</div>
-      <div className="date">Date</div>
+      <input readOnly checked={isDone} type="checkbox" />
+      <div className="content">{content}</div>
+      <div className="date">{new Date(date).toLocaleDateString()}</div>
       <button>삭제</button>
     </div>
   );

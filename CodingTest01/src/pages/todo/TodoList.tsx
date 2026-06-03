@@ -29,7 +29,7 @@ const mockData = [
 const TodoList = () => {
   // 할 일 목록을 관리하는 State입니다. 초기값으로 임시 데이터를 넣어줍니다.
   const [todos, setTodos] = useState(mockData);
-  
+
   // 새로 추가될 할 일의 고유 ID를 생성하기 위해 useRef를 사용합니다.
   // mockData에 이미 1, 2, 3이 있으므로 4부터 시작합니다.
   // State와 달리 값이 변경되어도 컴포넌트가 리렌더링되지 않습니다.
@@ -52,12 +52,12 @@ const TodoList = () => {
     <div className="App">
       {/* 화면의 제목(오늘 날짜)을 보여주는 영역 */}
       <Header />
-      
+
       {/* 할 일을 입력하고 추가하는 영역 (자식에게 onCreate 함수를 전달) */}
       <Editor onCreate={onCreate} />
-      
+
       {/* 추가된 할 일 목록들을 보여주는 영역 (추후 todos 배열을 넘겨줄 수 있습니다) */}
-      <List />
+      <List todos={todos} />
     </div>
   );
 };

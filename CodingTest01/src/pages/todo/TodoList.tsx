@@ -48,6 +48,16 @@ const TodoList = () => {
     setTodos([newTodo, ...todos]);
   };
 
+  const onUpdate = (targetId: number) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === targetId ? { ...todo, isDone: !todo.isDone } : todo,
+      ),
+    );
+  };
+  const onClickDelete = (id: number) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
   return (
     <div className="App">
       {/* 화면의 제목(오늘 날짜)을 보여주는 영역 */}
@@ -57,7 +67,7 @@ const TodoList = () => {
       <Editor onCreate={onCreate} />
 
       {/* 추가된 할 일 목록들을 보여주는 영역 (추후 todos 배열을 넘겨줄 수 있습니다) */}
-      <List todos={todos} />
+      <List todos={todos} onUpdate={onUpdate} onDelete={onClickDelete} />
     </div>
   );
 };

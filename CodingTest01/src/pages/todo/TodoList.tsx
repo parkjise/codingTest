@@ -48,14 +48,20 @@ const TodoList = () => {
     setTodos([newTodo, ...todos]);
   };
 
+  // 특정 할 일의 완료 상태(isDone)를 반전시키는 함수입니다. (List -> TodoItem으로 전달됨)
   const onUpdate = (targetId: number) => {
+    // 모든 할 일(todos)을 순회하면서, 매개변수로 받은 targetId와 일치하는 할 일을 찾습니다.
+    // 일치한다면 기존 데이터(...todo)는 유지하되 isDone 값만 반대로(!todo.isDone) 뒤집어서 새로운 배열을 만듭니다.
     setTodos(
       todos.map((todo) =>
         todo.id === targetId ? { ...todo, isDone: !todo.isDone } : todo,
       ),
     );
   };
+
+  // 특정 할 일을 목록에서 삭제하는 함수입니다. (List -> TodoItem으로 전달됨)
   const onClickDelete = (id: number) => {
+    // 배열의 filter 메서드를 사용하여, 삭제하려는 id와 일치하지 않는(지우지 않을) 할 일들만 남겨서 새로운 배열로 만듭니다.
     setTodos(todos.filter((todo) => todo.id !== id));
   };
   return (

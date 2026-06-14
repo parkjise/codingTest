@@ -18,7 +18,10 @@
 // import CategoryFilter from "./pages/cart/CategoryFilter";
 // import ProductSort from "./pages/cart/ProductSort";
 // import AddPost from "./pages/board/AddPost";
-import TodoList from "./pages/todo/TodoList";
+import Props from "./pages/props/Props";
+// import TodoAdd from "./pages/todolist/TodoAdd";
+// import TodoDelete from "./pages/todolist/TodoDelete";
+// import TodoList from "./pages/todolist/TodoList";
 function App() {
   return (
     <>
@@ -34,7 +37,11 @@ function App() {
       {/* <PostList /> */}
       {/* <PostDetail /> */}
       {/* <AddPost /> */}
-      <TodoList />
+      {/* <TodoList /> */}
+      {/* <TodoList /> */}
+      {/* <TodoAdd /> */}
+      <Props />
+      {/* <TodoDelete /> */}
     </>
   );
 }
